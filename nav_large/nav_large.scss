@@ -1,0 +1,129 @@
+@import '../Import';
+.nav_large{
+	max-width: 895px;
+	width: 100%;
+	margin: 0 auto;
+	overflow: hidden;
+	background: $yellow;
+	@include borderRadius(5px);
+	@include boxShadow(2px 2px 3px rgba(0,0,0,.3));
+}
+.nav_large img{
+	float: left;
+	margin-bottom: -3000%;
+}
+
+.nav_large h1{
+	margin: 35px;
+	font-size: 41px;
+	font-weight: 200;
+	color: $textOne;
+}
+
+.nav_large>p{
+	max-width: 250px;
+	margin: 0px 35px 35px 35px;
+	line-height: 160%;
+	font-size: 21px;
+	color: $textOne;
+}
+
+.nav_large a{
+	display: inline-block;
+	height: 35px;
+	line-height: 35px;
+	margin: 0 0 35px 130px;
+	background: $brown;
+	padding-left: 15px;
+	font-size: 14px;
+	color: $textTwo;
+	text-decoration: none;
+	@include borderRadius(50px);
+	@include transition(background .3s);
+}
+
+.nav_large a:hover{
+	background: $darkBrown;
+}
+
+.nav_large a span{
+	display: inline-block;
+	float: right;
+	width: 27px;
+	height: 27px;
+	line-height: 27px;
+	margin: 4px 4px 4px 10px;
+	color: $textOne;
+	font-size: 21px;
+	font-weight: bold;
+	text-align: center;
+	text-indent: 3px;
+	background: white;
+	@include borderRadius(50%);
+}
+
+.nav_large ul{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	float: left;
+	background: $brown;
+	color: $textTwo;
+	list-style-type:none;
+}
+
+.nav_large li{
+	@include boxSizing();
+	float: left;
+	width: 33.33333%;
+	border-left: 1px solid #959595;
+}
+
+.nav_large li:first-child{
+	border-left:none;
+}
+
+.nav_large li p{
+	margin: 10px 0;
+	padding: 0;
+	text-align: center;
+	line-height: 200%;
+	font-size: 29px;
+	font-weight: 200;
+}
+
+.nav_large li i{
+	line-height: 200%;
+}
+
+.nav_large li small{
+	font-size: 12px;
+	font-weight: normal;
+}
+
+@media screen and (max-width:768px){
+	.nav_large small{
+		display: block;
+		width: 100%;
+		margin-top: -20px;
+	}
+}
+
+@media screen and (max-width:480px){
+	.nav_large{
+		text-align: center;
+	}
+	.nav_large h1{
+		margin-bottom: 10px;
+		font-size: 35px;
+	}
+	.nav_large>p{
+		font-size:18px;
+	}
+	.nav_large a{
+		margin-left: 0;
+	}
+	.nav_large li p{
+	font-size: 20px;
+	}
+}
